@@ -2,16 +2,21 @@ import math
 import random
 
 
-random_num = random.randint(1, 10)
+numbers = []
+sum_numbers = 0
 while True:
-    guess = int(input("Enter your guess: "))
-    if(guess == random_num):
-        print(f"Correct!")
+    user_input = input("Enter a number: ")
+    if(user_input == ''):
         break
-    elif(guess < random_num):
-        print(f"Too low")
     else:
-        print(f"Too high")
+        number = int(user_input)
+        numbers.append(number)
+numbers.sort(reverse=True)
+if len(numbers) > 4:
+    for n in range(0, len(numbers)):
+        sum_numbers += numbers[n]
+print(f"Sum is: {sum}")
+
 
 
 

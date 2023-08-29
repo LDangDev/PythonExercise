@@ -147,3 +147,53 @@ while True:
         print(f"Too low")
     else:
         print(f"Too high")
+
+# Ex 5
+pwd = "rules"
+usr_name = "python"
+n = 5
+while (n >= 1):
+    user_input = input("Enter user name: ")
+    pwd_input = input("Enter password: ")
+    if(user_input == usr_name and pwd_input == pwd):
+        print(f"Welcome")
+        break
+    else:
+        if(n > 1):
+            print(f"Incorrect! Try again! You have {n - 1}  left")
+        else:
+            print(f"Access denied")
+    n -= 1
+
+# Ex 6
+
+# 5. List structures and iterative loops (for)
+# Ex 1
+dice = [1, 2, 3, 4, 5, 6]
+sum = 0
+user_input = int(input("How many dice to roll: "))
+for n in range(0, user_input):
+    value = dice[random.randint(0, 5)]
+    print(f"value: {value}")
+    sum += value
+print(f"Sum of numbers: {sum}")
+
+# Ex 2
+numbers = []
+sum_numbers = 0
+while True:
+    user_input = input("Enter a number: ")
+    if(user_input == ''):
+        break
+    else:
+        number = int(user_input)
+        numbers.append(number)
+numbers.sort(reverse=True)
+if len(numbers) > 4:
+    for n in range(5):
+        sum_numbers += numbers[n]
+print(f"Sum is: {sum}")
+
+
+
+
