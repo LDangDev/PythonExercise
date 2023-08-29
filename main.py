@@ -59,12 +59,6 @@ while n < 4:
 print(f"A 3-digit code random: {random_1}")
 print(f"A 4-digit code random: {random_2}")
 
-def generateRandom(n):
-    i = 0
-    result = ''
-    while (i < n):
-        result += str(random.randint(0, 9))
-    return result
 # 3. Conditional structures (if)
 # Ex 1
 input = float(input("Enter length of zander(in cm): "))
@@ -127,3 +121,29 @@ while True:
         print(f"Converted to cm: {result}")
     else:
         break
+# Ex 3
+numbers = []
+while True:
+    user_input = input("Enter a number: ")
+    if(user_input == ''):
+        break
+    else:
+        number = int(user_input) 
+        numbers.append(number)
+
+minNum = min(numbers)
+maxNum = max(numbers)
+print(f"Min number: {minNum}")
+print(f"Max number: {maxNum}")
+
+# Ex 4
+random_num = random.randint(1, 10)
+while True:
+    guess = int(input("Enter your guess: "))
+    if(guess == random_num):
+        print(f"Correct!")
+        break
+    elif(guess < random_num):
+        print(f"Too low")
+    else:
+        print(f"Too high")
