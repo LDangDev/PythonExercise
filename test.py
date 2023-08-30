@@ -2,20 +2,16 @@ import math
 import random
 
 
-numbers = []
-sum_numbers = 0
-while True:
-    user_input = input("Enter a number: ")
-    if(user_input == ''):
-        break
-    else:
-        number = int(user_input)
-        numbers.append(number)
-numbers.sort(reverse=True)
-if len(numbers) > 4:
-    for n in range(0, len(numbers)):
-        sum_numbers += numbers[n]
-print(f"Sum is: {sum}")
+def even_lists_only(numbers):
+    new_numbers = []
+    for number in numbers:
+        if number % 2 == 0:
+            new_numbers.append(number)
+    return new_numbers
+test1 = even_lists_only([1, 2, 3, 4, 5])
+test2 = even_lists_only([])
+print(f"{test1}")
+print(f"{test2}")
 
 
 

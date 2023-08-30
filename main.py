@@ -183,7 +183,7 @@ numbers = []
 sum_numbers = 0
 while True:
     user_input = input("Enter a number: ")
-    if(user_input == ''):
+    if user_input == '':
         break
     else:
         number = int(user_input)
@@ -194,6 +194,64 @@ if len(numbers) > 4:
         sum_numbers += numbers[n]
 print(f"Sum is: {sum}")
 
+# Ex 3
 
+# Ex 4
+cities = []
+for i in range(5):
+    user_input = input("Enter a city: ")
+    cities.append(user_input)
+for city in cities:
+    print(f"{city}")
 
-
+# 6. Functions
+# Ex 1
+def random_dice():
+    return random.randint(1, 6)
+roll_count = 0
+while True:
+    roll = random_dice()
+    roll_count += 1
+    print(f"Roll: {roll_count} Value: {roll}")
+    if roll == 6:
+        break
+# Ex 2
+sides = 21
+def random_dice(sides):
+    return random.randint(1, sides)
+roll_count = 0
+while True:
+    roll = random_dice(sides)
+    roll_count += 1
+    print(f"Roll: {roll_count} Value: {roll}")
+    if roll == sides:
+        break
+# Ex 3
+def gallon_to_liter(gallons):
+    return gallons * 3.78541
+while True:
+    gallons = float(input("Enter gallons to be converted: "))
+    if gallons < 0:
+        break
+    result = gallon_to_liter(gallons)
+    print(f"{gallons} gallons equal {result} liters")
+# Ex 4
+def sum_lists(numbers):
+    sum = 0
+    for number in numbers:
+        sum += number
+    return sum
+test1 = sum_lists([1, 2, 3, 4, 5])
+test2 = sum_lists([])
+print(f"{test1}")
+print(f"{test2}")
+# Ex 5
+def even_lists_only(numbers):
+    new_numbers = []
+    for number in numbers:
+        if number % 2 == 0:
+            new_numbers.append(number)
+test1 = even_lists_only([1, 2, 3, 4, 5])
+test2 = even_lists_only([])
+print(f"{test1}")
+print(f"{test2}")
