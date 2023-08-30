@@ -2,27 +2,18 @@ import math
 import random
 
 
-first_pizza = float(input("Enter diameter of first pizza: "))
-first_price = float(input("Enter price of first pizza: "))
-second_pizza = float(input("Enter diameter of second pizza: "))
-second_price = float(input("Enter price of second pizza: "))
-def unit_price(diameter, price):
-    pi_value = math.pi
-    radius_value = diameter / 2
-    area = pi_value * radius_value * radius_value
-    conversion_factor = 10000
-    area_in_m2 = area / conversion_factor
-    unit_price = price / area_in_m2
-    return unit_price
-first_pizza_unit_price = unit_price(first_pizza, first_price)
-second_pizza_unit_price = unit_price(second_pizza, second_price)
-if  first_pizza_unit_price < second_pizza_unit_price:
-    print(f"The pizza 1 has better value!")
-elif first_pizza_unit_price > second_pizza_unit_price:
-    print(f"The pizza 2 has better unit value!")
-else:
-    print(f"2 pizza has the same unit value!")
-
-
-
-
+seasons = "spring", "summer", "autumn", "winter"
+while True:
+	user_input = int(input("Enter a number of a month: "))
+	if user_input >= 1 and user_input <= 12:
+		if user_input == 12 or (user_input >= 1 and user_input <= 2):
+			print(f"{seasons[3].capitalize()}")
+		elif user_input >= 3 and user_input <= 5:
+			print(f"{seasons[0].capitalize()}")
+		elif user_input >= 6 and user_input <= 8:
+			print(f"{seasons[1].capitalize()}")
+		else:
+			print(f"{seasons[2].capitalize()}")
+		break
+	else:
+		print(f"Enter number in range 1-12")
