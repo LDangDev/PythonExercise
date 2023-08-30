@@ -80,8 +80,8 @@ elif input == "C":
 else:
 	print(f"Invalid cabin class")
 # Ex 3
+gender = input("Enter your gender: ")
 if gender == "males":
-	gender = input("Enter your gender: ")
 	hemoglobin = float(input("Enter hemoglobin value: "))
 	if hemoglobin < 134:
 		print(f"low")
