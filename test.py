@@ -1,19 +1,19 @@
 import math
 import random
 
-
-seasons = "spring", "summer", "autumn", "winter"
+names = set()
 while True:
-	user_input = int(input("Enter a number of a month: "))
-	if user_input >= 1 and user_input <= 12:
-		if user_input == 12 or (user_input >= 1 and user_input <= 2):
-			print(f"{seasons[3].capitalize()}")
-		elif user_input >= 3 and user_input <= 5:
-			print(f"{seasons[0].capitalize()}")
-		elif user_input >= 6 and user_input <= 8:
-			print(f"{seasons[1].capitalize()}")
-		else:
-			print(f"{seasons[2].capitalize()}")
+	user_input = input("Enter a name: ")
+	if(user_input == ''):
 		break
+	if (len(names) == 0):
+		print(f"New name")
+		names.add(user_input)
 	else:
-		print(f"Enter number in range 1-12")
+		if(user_input in names):
+			print(f"Existing name")
+		else:
+			print(f"New name")
+			names.add(user_input)
+
+		
