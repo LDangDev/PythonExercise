@@ -29,7 +29,7 @@ input1 = int(input("Enter first number: "))
 input2 = int(input("Enter second number: "))
 input3 = int(input("Enter third number: "))
 sum = input1 + input2 + input3
-avg = float((input1 + input2 + input3) / 3)
+avg = (input1 + input2 + input3) / 3
 product = input1 * input2 * input3
 print(f"Sum is: {sum}")
 print(f"Product is: {product}")
@@ -39,8 +39,8 @@ print(f"Average is: {avg:.2f}")
 talents = float(input("Enter talents:\n"))
 pounds = float(input("Enter pounds:\n"))
 lots = float(input("Enter lots:\n"))
-total_in_grams = ((talents * 20) * 32) * 13.3 + pounds * 32 * 13.3 + lots * 13.3
-kilo = math.floor((total_in_grams) / 1000)
+total_in_grams = talents * 20 * 32 * 13.3 + pounds * 32 * 13.3 + lots * 13.3
+kilo = math.floor(total_in_grams / 1000)
 grams = total_in_grams % 1000
 print(f"{total_in_grams}")
 print(f"The weight in modern units:\n")
@@ -211,7 +211,6 @@ for city in cities:
 def random_dice():
     return random.randint(1, 6)
 
-
 roll_count = 0
 while True:
     roll = random_dice()
@@ -222,10 +221,8 @@ while True:
 # Ex 2
 sides = 21
 
-
 def random_dice(sides):
     return random.randint(1, sides)
-
 
 roll_count = 0
 while True:
@@ -235,11 +232,9 @@ while True:
     if roll == sides:
         break
 
-
 # Ex 3
 def gallon_to_liter(gallons):
     return gallons * 3.78541
-
 
 while True:
     gallons = float(input("Enter gallons to be converted: "))
@@ -300,6 +295,8 @@ elif first_pizza_unit_price > second_pizza_unit_price:
     print(f"The pizza 2 has better unit value!")
 else:
     print(f"2 pizza has the same unit value!")
+    
+
 # 7. Tuple, set, and dictionary
 # Ex 1
 seasons = "spring", "summer", "autumn", "winter"
