@@ -1,7 +1,21 @@
-import math
-import random
-
-<<<<<<< HEAD
+# 7. Tuple, set, and dictionary
+# Ex 1
+seasons = "spring", "summer", "autumn", "winter"
+while True:
+    user_input = int(input("Enter a number of a month: "))
+    if user_input >= 1 and user_input <= 12:
+        if user_input == 12 or (user_input >= 1 and user_input <= 2):
+            print(f"{seasons[3].capitalize()}")
+        elif user_input >= 3 and user_input <= 5:
+            print(f"{seasons[0].capitalize()}")
+        elif user_input >= 6 and user_input <= 8:
+            print(f"{seasons[1].capitalize()}")
+        else:
+            print(f"{seasons[2].capitalize()}")
+        break
+    else:
+        print(f"Enter number in range 1-12")
+# Ex 2
 names = set()
 while True:
     user_input = input("Enter a name: ")
@@ -16,8 +30,7 @@ while True:
         else:
             print(f"New name")
             names.add(user_input)
-=======
-
+# Ex 3
 airports = {
     "Helsinki Vantaa Airport": "EFHK",
     "Charles de Gaulle International Airport": "LFPG",
@@ -29,12 +42,14 @@ airports = {
     "Tokyo Haneda Airport": "RJTT",
     "Singapore Changi Airport": "WSSS",
     "Munich Airport": "EDDM",
-    "Sydney Airport": "YSSY"
+    "Sydney Airport": "YSSY",
 }
 
 while True:
     isFound = False
-    options = input("Do you want to enter a new airport? Or fetch the information? Or Quit? Choose E or F or Q: ").upper()
+    options = input(
+        "Do you want to enter a new airport? Or fetch the information? Or Quit? Choose E or F or Q: "
+    ).upper()
     if options == "E":
         name_airport = input("Enter name of airport: ")
         if name_airport in airports:
@@ -54,4 +69,3 @@ while True:
             print(f"Does not found any match airport in database")
     else:
         break
->>>>>>> addf7f5 (module 8)
