@@ -10,7 +10,7 @@ def getAirportNameAndLocation(ICAO_code):
     for row in response:
         print(f"Airport name is: {row[1]} and location is {row[2]}")
 
-
+# declare connection
 connection = mysql.connector.connect(
     host="127.0.0.1",
     port=3306,
