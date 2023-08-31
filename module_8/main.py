@@ -1,6 +1,7 @@
 import mysql.connector
 
-
+# 8. Using relational databases
+# Ex 1
 def getAirportNameAndLocation(ICAO_code):
     sql_query = "select ident, airport.name as airport_name, country.name as country_name "
     sql_query += "from airport inner join country on country.iso_country = airport.iso_country "
