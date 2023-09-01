@@ -1,6 +1,8 @@
 import mysql.connector
 import math
 from geopy import distance
+
+
 # 8. Using relational databases
 # Ex 1
 def getAirportNameAndLocation(ICAO_code):
@@ -76,8 +78,9 @@ def calculate_airports_distance(first_ICAO_code, second_ICAO_code):
     second_airport = response[1][2], response[1][3]
 
     airports_distance = distance.distance(first_airport, second_airport).km
-    print(f"The distance between {response[0][1]} and {response[1][1]} is {airports_distance:.2f} km")
-
+    print(
+        f"The distance between {response[0][1]} and {response[1][1]} is {airports_distance:.2f} km"
+    )
 
 
 connection = mysql.connector.connect(
