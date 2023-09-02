@@ -178,8 +178,9 @@ class Race:
         for car in self.cars:
             if car.traveled_distance >= self.distance:
                 # print(f"traveled distance: {car.traveled_distance}")
+                # break (Why place break here and return outside does not work as expected??????)
                 return True
-
+        # return True
 
 race = Race("Grand Demolition Derby", 10000, 10)
 hour = 0
