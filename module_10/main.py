@@ -60,3 +60,33 @@ e2 = Elevator(1, 10)
 b.run_elevator(1, 5)
 print("----------------------------------")
 b.run_elevator(2, 7)
+
+
+# Ex 3
+class Building:
+    def __init__(self, number_bottom, number_top, number_of_elevator):
+        self.number_bottom = number_bottom
+        self.number_top = number_top
+        self.number_of_elevator = number_of_elevator
+        self.elevators = []
+        for i in range(number_of_elevator):
+            new_elevator = Elevator(number_bottom, number_top)
+            self.elevators.append(new_elevator)
+
+    def run_elevator(self, elevator_number, destination_floor):
+        elevator = self.elevators[elevator_number - 1]
+        elevator.go_to_floor(destination_floor)
+
+    def fire_alarm(self):
+        for elevator in self.elevators:
+            elevator.go_to_floor(1)
+
+
+b = Building(1, 10, 2)
+e1 = Elevator(1, 10)
+e2 = Elevator(1, 10)
+b.run_elevator(1, 5)
+print("----------------------------------")
+b.run_elevator(2, 7)
+print("----------------------------------")
+b.fire_alarm()
