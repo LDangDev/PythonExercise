@@ -1,38 +1,32 @@
 # Ex 1
 class Publication:
-    def __init__(self, name):
+    def __init__(self, name) -> None:
         self.name = name
-
-    def print_information(self):
-        print(f"Publication: {self.name}")
 
 
 class Book(Publication):
-    def __init__(self, name, author_name, pages):
+    def __init__(self, name, author_name, page_count) -> None:
         self.author_name = author_name
-        self.pages = pages
+        self.page_count = page_count
         super().__init__(name)
 
     def print_information(self):
-        super().print_information()
-        print(f"Author name: {self.author_name}")
-        print(f"This book has {self.pages} pages")
+        print(f"{self.name} (author {self.author_name}, {self.page_count} pages)")
 
 
 class Magazine(Publication):
-    def __init__(self, name, editor_name):
-        self.editor_name = editor_name
+    def __init__(self, name, chief_editor) -> None:
+        self.chief_editor = chief_editor
         super().__init__(name)
 
     def print_information(self):
-        super().print_information()
-        print(f"chief editor name: {self.editor_name}")
+        print(f"{self.name} (chief editor {self.chief_editor})")
 
 
-b1 = Book("Compartment No. 6", "Rosa Liksom", 192)
-m1 = Magazine("Donald Duck", "Aki Hyyppä")
-b1.print_information()
-m1.print_information()
+book = Book("Compartment No. 6", "Rosa Liksom", 192)
+megazine = Magazine("Donald Duck", "Aki Hyyppä")
+book.print_information()
+megazine.print_information()
 
 # Ex 2
 
