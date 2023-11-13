@@ -41,7 +41,7 @@ class Car:
         return
 
 
-# Ex 3
+# Ex 3, 4
 class Car:
     def __init__(
         self, registration_number, maximum_speed, current_speed=0, traveled_distance=0
